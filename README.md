@@ -14,7 +14,7 @@ git clone https://github.com/hirotaka42/Python3-Downloader.git
 cd Python3-Downloader
 
 # venv(仮想環境) を作成
-python -m venv venv
+python3 -m venv venv
 # venv を有効化
 . ./venv/bin/activate
 
@@ -25,6 +25,9 @@ pip install -r requirements.txt
 
 # venv内で実行
 python3 start.py
+
+# 'n'で終了したら 保存先のディレクトリが開きます
+
 
 # 終了したら仮想環境を終了
 deactivate
