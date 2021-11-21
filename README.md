@@ -9,6 +9,10 @@ python >= 3.8
 ## Mac
 
 ```
+# git clone
+git clone https://github.com/hirotaka42/Python3-Downloader.git
+cd Python3-Downloader
+
 # venv(仮想環境) を作成
 python -m venv venv
 # venv を有効化
