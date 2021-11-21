@@ -34,6 +34,11 @@ python3 start.py
 
 # 終了したら仮想環境を終了
 deactivate
+
+# 2回目以降 (venv有効化し、実行)
+source ./venv/bin/activate
+python3 start.py
+
 ```
 
 ## mac 一括実行(コピペ用)
@@ -52,6 +57,10 @@ python3 start.py
 # 'n'で終了したら 保存先のディレクトリが開きます
 # 終了したら仮想環境を終了
 deactivate
+
+# 2回目以降 (venv有効化し、実行)
+source ./venv/bin/activate
+python3 start.py
 ```
 
 ## How to use
