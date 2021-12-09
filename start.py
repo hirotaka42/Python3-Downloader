@@ -13,8 +13,19 @@ def is_open_dir():
 
     # フォルダのパスを取得
     path = os.getcwd()
-    # open
-    subprocess.call(["open", path])
+    try:
+        # open
+        subprocess.call(["open", path])
+    except FileNotFoundError:
+        # Error
+        print("Error---------------------------------+")
+        print('ディレクトリを開く事が出来ませんでした.\n予期していない環境の可能性があります.\n')
+        # Error
+        print("Pathを参考にしてください.-------------+")
+        print('{}'.format(path))
+        print("+-------------------------------------+\n")
+        
+    
 
 
 def is_imput() -> str:
