@@ -4,7 +4,13 @@
 
 python >= 3.8
 
-## Installation
+
+# Installation
+
+pypi :[https://pypi.org/project/yt-dlp/](https://pypi.org/project/yt-dlp/)
+Github :[yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
+
+現状720Pでダウンロードを開始し、失敗した場合480Pでダウンロードを再実行するようになっています。
 
 ## Mac
 

@@ -59,20 +59,33 @@ def main():
     入力されたURLから動画を保存する
     """
 
+    # URLの入力受付
     imput_key = is_imput()
     if imput_key[:1] == "n" or imput_key[:1] == "N":
         print("ディレクトリを開き,終了します")
-        # ディレクトリを開く
+        # 終了選択がされた場合、ファイルのあるディレクトリを開く
         is_open_dir()
-
         exit()
 
-    ydl_opts = {}
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        ydl.download(['{}'.format(imput_key)])
-        
+    # yt_dlpの設定開始
+    # ℹ️ See docstring of yt_dlp.YoutubeDL for a description of the options
+    
+    try:
+        ydl_opts = {
+            'format': '22',
+        }
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download(['{}'.format(imput_key)])
+    except yt_dlp.utils.DownloadError:
+        print("yt_dlp.utils.DownloadError----- \n Retry")
+        ydl_opts = {
+            'format': '18',
+        }
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download(['{}'.format(imput_key)])
+    
+    # DL完了のプリント表示
     is_download_finish()
-
 
 if __name__ == '__main__' :
 
