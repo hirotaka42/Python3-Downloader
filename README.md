@@ -12,7 +12,25 @@ Github :[yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 現状720Pでダウンロードを開始し、失敗した場合480Pでダウンロードを再実行するようになっています。
 
-## Mac
+## mac 一括実行(コピペ用)
+```
+git clone https://github.com/hirotaka42/Python3-Downloader.git && \
+cd Python3-Downloader && open ./ && \
+python3 -m venv venv && \
+source ./venv/bin/activate && \
+python3 -m pip install --upgrade pip && \
+pip install -r requirements.txt && \
+echo "# 2回目以降は以下をコピーし実行してください" && \
+echo '-----------------------------' && \
+echo 'source ./venv/bin/activate' && \
+echo 'python3 start.py' && \
+echo '-----------------------------' && \
+python3 start.py
+
+```
+
+
+## 解説
 
 ```
 # git clone
@@ -45,28 +63,6 @@ deactivate
 source ./venv/bin/activate
 python3 start.py
 
-```
-
-## mac 一括実行(コピペ用)
-```
-# git clone
-git clone https://github.com/hirotaka42/Python3-Downloader.git
-cd Python3-Downloader
-
-# venv(仮想環境) を作成
-python3 -m venv venv && \
-source ./venv/bin/activate && \
-python3 -m pip install --upgrade pip && \
-pip install -r requirements.txt && \
-python3 start.py
-
-# 'n'で終了したら 保存先のディレクトリが開きます
-# 終了したら仮想環境を終了
-deactivate
-
-# 2回目以降 (venv有効化し、実行)
-source ./venv/bin/activate
-python3 start.py
 ```
 
 ## How to use
