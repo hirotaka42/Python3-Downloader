@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-python >= 3.8
+python >= 3.7.8
 
 
 # Installation
@@ -41,9 +41,9 @@ cd Python3-Downloader
 python3 -m venv venv
 
 # venv を有効化
-. ./venv/bin/activate
-# もしくわ
 source ./venv/bin/activate
+# もしくわ
+. ./venv/bin/activate
 
 # venv内の pipをアップグレード
 python3 -m pip install --upgrade pip
